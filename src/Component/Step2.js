@@ -19,8 +19,8 @@ class Step2 extends Component {
       </select> 
       <br/>
      
-      <Button type="primary" style={{margin:"50px"}}> <Icon type="left" />Previous</Button>
-      <Button type="primary"> Next <Icon type="right" /></Button>
+      <Button type="primary" style={{margin:"50px"}} onClick={()=>this.props.triggerParentUpdate(1)}> <Icon type="left" />Previous</Button>
+      <Button type="primary" onClick={()=>this.props.triggerParentUpdate(3)}> Next <Icon type="right" /></Button>
       
     </div>
         )

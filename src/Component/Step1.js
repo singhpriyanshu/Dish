@@ -3,14 +3,12 @@ import { Button, Icon } from 'antd';
 
 class Step1 extends Component {
    
-    
-
-   
     render() {
         
         let {selectMeal,selectPeople}=this.props;
         return (
       <div>
+          
      <select name="selectMeal" defaultValue={selectMeal} onChange={this.props.handleChange} style={{ width: 120 }} >
       <option value="lunch">lunch</option>
       <option value="dinner">dinner</option> 
@@ -22,11 +20,11 @@ class Step1 extends Component {
       <input type="number" name="selectPeople" defaultValue={selectPeople} onChange={this.props.handleChange} style={{ width: 50 }}/>
      </div>
      
-     <Button type="primary" style={{margin:"50px"}} > <Icon type="left" />Previous</Button>
-     <Button type="primary" onClick={()=>this.props.triggerParentUpdate}> Next </Button>
-     {/* onClick={()=>{this.buttonClick(this.defaultActiveKey="2")}} */}
-
+     <Button type="primary" style={{margin:"50px"}} onClick={()=>this.props.triggerParentUpdate(1)}> <Icon type="left" />Previous</Button>
+     <Button type="primary" onClick={()=>this.props.triggerParentUpdate(2)}> Next </Button>
      
+
+    
      
      </div>
       
