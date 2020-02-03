@@ -7,16 +7,15 @@ class Step1 extends Component {
         
         let {selectMeal,selectPeople}=this.props;
         return (
-     <div className="style" >
+     <div className="bc">
           <div style={{padding:"30px"}} >
           Meals : 
       <select name="selectMeal" defaultValue={selectMeal} onChange={this.props.handleChange} style={{ width: 120 }} >
-         <option value="lunch">lunch</option>
-         <option value="dinner">dinner</option> 
-         <option value="breakfast">breakfast</option>
+         <option value="Lunch">Lunch</option>
+         <option value="Dinner">Dinner</option> 
+         <option value="Breakfast">Breakfast</option>
      </select> <br/> 
           </div>
-      
       <div> 
       Please Select No. of People : 
       <input type="number" name="selectPeople" defaultValue={selectPeople} onChange={this.props.handleChange} style={{ width: 50 }}/>

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Icon } from 'antd';
-// import {Select} from "antd"
-// const { Option } = Select;
+
 
 
 class Step3 extends Component {
@@ -10,7 +9,7 @@ class Step3 extends Component {
     render() {
         let {dishes}=this.props
         return (
-            <div>
+            <div className="bc">
                 {dishes.length>0?
                 dishes.map((item,index)=>{
                    return( 
@@ -30,13 +29,13 @@ class Step3 extends Component {
                     </select> <br/>
                          <div style={{margin:"17px"}}>
                             Please Select No. of Servings :  
-                            <input type="number" name="servings"  defaultValue={0} onChange={(e)=>this.props.handledishesChanges(e,index)} style={{ width: 90 }}/>
+                            <input type="number" name="servings"   onChange={(e)=>this.props.handledishesChanges(e,index)} style={{ width: 60 }}/>
                          </div>
                             </div>
 
                    )
                 })
-                :""}
+                :""} 
 
        < Icon type="plus-circle" style={{marginRight:"670px",fontSize:"25px"}} onClick={this.props.addMoreDishes} />
    <div style={{padding:"170px"}}>

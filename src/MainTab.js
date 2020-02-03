@@ -42,7 +42,8 @@ class MainTab extends Component {
             });
             // console.log('data :',dishes)
              this.setState({
-              dishes        
+              dishes 
+                  
              });
           }
 
@@ -98,7 +99,6 @@ class MainTab extends Component {
       dishes={dishes}
       handledishesChanges={this.handledishesChanges}
       addMoreDishes={this.addMoreDishes}
-      
      />
      </TabPane>
 

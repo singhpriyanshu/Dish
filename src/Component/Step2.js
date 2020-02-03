@@ -6,7 +6,7 @@ class Step2 extends Component {
     render() {
         let {selectRestaurant} = this.props
         return (
-            <div className="style">
+            <div className="bc">
         Please Select a Restaurant :  
 
       <select name="selectRestaurant" defaultValue={selectRestaurant} onChange={this.props.handleChange} style={{ width: 160 }} >
