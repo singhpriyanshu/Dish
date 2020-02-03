@@ -5,31 +5,40 @@ import { Row, Col } from 'antd';
 
 
 export class Review extends Component {
-   
-    handleSubmit=(e)=>{
-        e.preventDefault(); 
-        console.log(this.props)
-         }  
-       
+      
     render() {
-        const { selectMeal,selectRestaurant,selectDish,servings}=this.props;
+        const { selectMeal,selectRestaurant,dishes,selectPeople}=this.props;
         return (
-             <div className="color">
+             <div  style={{ textAlign:"initial",  margin:"50px"}}>
            
     <Row>
-      <Col span={24} style={{margin:"30px",display:"flex"}} >Meal : {selectMeal}</Col>
-      <Col span={24} style={{margin:"30px",display:"flex"}}>No. of servings :{servings} </Col>
-      <Col span={24} style={{margin:"30px",display:"flex"}}>
+      <Col  >Meal : {selectMeal}</Col>
+        <Col>No. of servings : {selectPeople}</Col>
+      <Col>
           Restaurant :{selectRestaurant} </Col>
-     <Col span={24} style={{margin:"30px",display:"flex"}}>Dishes : {selectDish}</Col>
+     <Col>
+         Dishes : {dishes.length > 0 ? dishes.map((item,index)=>{
+                   return  <div key={index}>
+                        <p>{item.dishes}</p>
+                        <p>{item.servings}</p>
+                    </div>
+                  }) :""}
+     </Col>
     </Row>
-    
-    <Button type="primary" style={{margin:"50px"}} onClick={()=>this.props.triggerParentUpdate(3)}> <Icon type="left" />Previous</Button>
-    <Button onClick={this.handleSubmit} > Submit <Icon type="right" /></Button>
-       
-   </div>     
+  
+    <div style={{padding:"100px"}} >
+    <Button type="primary" style={{margin:"20px"}} onClick={()=>this.props.triggerParentUpdate(3)}> <Icon type="left" />Previous</Button>
+    <Button onClick={()=>this.props.triggerParentUpdate(5)}> Submit <Icon type="right" /></Button>
+   
+    </div>
+   
+
+     </div>
      )
     }
 }
 
 export default Review
+
+ 
+

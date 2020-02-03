@@ -1,4 +1,13 @@
 @import '~antd/dist/antd.css';
+
+.style {
+  font-size: larger;
+  display: initial;
+  
+  justify-content: center;
+  
+}
+
 .App {
   text-align: center;
 }
